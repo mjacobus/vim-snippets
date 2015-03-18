@@ -107,9 +107,7 @@ endsnippet
 
 snippet getter "PHP Class Getter" b
 /**
- * Getter for $1
- *
- * ${2:return string}
+ * @return ${2:string}
  */
 public function get${1/\w+\s*/\u$0/}()
 {
@@ -119,8 +117,6 @@ endsnippet
 
 snippet setter "PHP Class Setter" b
 /**
- * Setter for $1
- *
  * @param ${2:string} $$1                                                                                                                               
  * @return ${3:`!p snip.rv=snip.basename`}
  */
@@ -135,9 +131,7 @@ endsnippet
 
 snippet gs "PHP Class Getter Setter" b
 /**
- * Getter for $1
- *
- * return ${2:string}
+ * @return ${2:string}
  */
 public function get${1/\w+\s*/\u$0/}()
 {
@@ -145,8 +139,6 @@ public function get${1/\w+\s*/\u$0/}()
 }
 
 /**
- * Setter for $1
- *
  * @param $2 $$1
  * @return ${4:`!p snip.rv=snip.basename`}
  */
@@ -155,8 +147,7 @@ public function set${1/\w+\s*/\u$0/}(${5:${2/(void|string|int|integer|double|flo
     $this->$1 = $$1;$6
 
     ${7:return $this;}
-}
-$0
+}$0
 endsnippet
 
 snippet pub "Public function" b
